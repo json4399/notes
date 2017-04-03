@@ -1,0 +1,38 @@
+html,body{width:100%;height:100%;margin:0;}
+html{font-size:100px;}
+body{font-size:12px;font-family: "Microsoft YaHei", "微软雅黑", STHeiti, MingLiu;background:white;}
+.bd{margin:0 auto;width:100%;max-width:750px;background:#fff;}
+figure{margin:0;}
+
+header{
+    position:$absolute;
+    z-index:1;
+    background:white;
+    border-bottom:solid 1px #e1e1e1;
+    width:100%;
+    height:0.8rem;
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+	
+}
+header p{
+	font-size:0.48rem;
+}
+#bodyCenter{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0.88rem;
+	bottom:0;
+	z-index:2;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+p{
+	text-indent: 2em;
+	font-size:0.28rem;
+}
+h3{
+	font-size:0.4rem;
+}
