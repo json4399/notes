@@ -29,6 +29,9 @@ header p{
 	overflow: auto;
 	-webkit-overflow-scrolling: touch;
 }
+#bodyCenter img{
+	margin:0.2rem 0;
+}
 p{
 	text-indent: 2em;
 	font-size:0.28rem;
