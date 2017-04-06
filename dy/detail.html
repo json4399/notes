@@ -1,0 +1,225 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="电影 最新电影 最火电影 影视之家" id="metaDescription">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link href="css/detail.css" rel="stylesheet">
+		<script src="js/zepto.min.js" type="text/javascript"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<title id="player_nav"></title>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- bodyCenter S-->
+		<div id="bodyCenter">
+			<!--视频-->
+			<div class="player_box">
+	<iframe id="player" src ="" width="100%" height="100%" frameborder=0></iframe>
+				<!--<iframe id="player" src =""  frameborder=0></iframe>-->
+				<div class="player_message">
+					<p class="player_title"></p>
+					<div class="player_information">
+						<p class="info_score_box"><span class="info_score"></span>分</p>
+						<p class="info_type"></p>
+						<p class="info_set_box">全集<span class="info_set"></span></p>
+						<p class="info_hitNum_box"><span class="info_hitNum"></span>次播放</p>
+					</div>
+					<!--<div class="user_information">
+						<div class="user_information_L">
+							<img class="user_information_a" src="images/icon/10.png"/>
+							<div class="user_comment">
+								<span class="comment_num">0</span>个评论
+							</div>
+						</div>
+						<div class="user_information_R">
+							分享 收藏
+							<img class="user_information_b" src="images/icon/11.png"/>
+							<img class="user_information_c" src="images/icon/12.png"/>
+						</div>
+					</div>-->
+				</div>
+			</div>
+			
+			<!--剧集-->
+			<div class="drama_wrapper">
+				<!--<div class="drama_box">
+					<p class="drama_type">剧集</p>
+					<p class="drama_text">每周日至周五24点两集，每周六24点一集/更新至<span class="drama_updataNum">52</span>集</p>
+					
+				</div>-->
+				<!--电视剧显示，电影隐藏，-->
+				<div class="swiper-container wrapper_swiper1" >
+				   	 <div class="swiper-wrapper">
+				        <div class="swiper-slide  img_silde_click " >剧集</div>
+				       
+				   	 </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				</div>
+				<!--综艺 有图片-->
+				<div class="swiper-container wrapper_swiper2 " style="display:none">
+				   	 <div class="swiper-wrapper">
+				        <div class="swiper-slide img_slide " ><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"><img class="slide_1" src="images/u79.png"  /></a><p>热播ssss</p></div>
+				        <div class="swiper-slide img_slide "><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"><img class="slide_1" src="images/u79.png"  /></a><p>热播ssss</p></div>
+				    	<div class="swiper-slide img_slide "><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"><img class="slide_1" src="images/u79.png"  /></a><p>热播ssss</p></div>
+				    	<div class="swiper-slide img_slide " ><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"><img class="slide_1" src="images/u79.png"  /></a><p>热播ssss</p></div>
+				        <div class="swiper-slide img_slide "><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"><img class="slide_1" src="images/u79.png"  /></a><p>热播ssss</p></div>
+				    	<div class="swiper-slide img_slide "><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"><img class="slide_1" src="images/u79.png"  /></a><p>热播ssss</p></div>
+				    	
+				   	 </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="border_gray"></div>
+			<!--广告一-->
+			<a class="advertisement_a" href="javascipt:void(0)" onclick="alert('弹出广告')"><img src="images/u19.jpg"/></a>
+			<div class="border_gray"></div>	
+			<!--片花一览-->
+			<div class="hotGood_title">
+				<p class="hotGood_title_img" ><img src="images/icon/2.png" alt="" /></p>
+				<p class="tongzhu_title">热门影片</p>
+				<p class="tokyo_more"><span>更多大片</span><img src="images/icon/1.png" alt="" /></p>
+			</div>
+			<div class="swiper-container wrapper_swiper5">
+			   	 <div class="swiper-wrapper">
+			        <!--
+			        	<div class="swiper-slide img_slide" ><img class="slide_1" src="images/u79.png"  /><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"></a>
+			        	<div class="swiper_message">独家报道英是的</div>	
+			        </div>
+			    	-->
+			   	 </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			</div>
+			<div class="border_gray"></div>
+			<!--广告-->
+			<div class="advertisement_b">
+				<a href="javascipt:void(0)" onclick="alert('弹出广告')"><img src="images/u19.jpg"/></a>
+				<a class="advertisement_b_center" href="javascipt:void(0)" onclick="alert('弹出广告')"><img src="images/u19.jpg"/></a>
+				<a href="javascipt:void(0)" onclick="alert('弹出广告')"><img src="images/u19.jpg"/></a>
+			</div>
+			<div class="border_gray"></div>
+			<!--相关推荐-->
+			<div class="serialize serialize_a" >
+				<div class="hotGood_title">
+					<p class="hotGood_title_img" ><img src="images/icon/2.png" alt="" /></p>
+					<p class="remen_title">热门影片</p>
+					<p class="tokyo_more"><span>更多大片</span><img src="images/icon/1.png" alt="" /></p>
+				</div>
+				<div class="tokyo_hot">
+				<div class="tokyo_wrapper movice_box_4">
+					<!--<figure >
+						<img src="images/u45.png"/>
+						<figcaption>
+							<p class="tokyo_title">先生帮帮忙标题忙标题先生帮帮忙标题</p>
+						</figcaption>
+						<div class="tokyo_player_message">
+							<div class="tokyo_player_watch">
+								<img src="images/icon/5.png" alt="" />
+								<span class="tokyo_watch_num">6.2万</span>
+							</div>
+							<div class="tokyo_player_play">
+								<img src="images/icon/6.png" alt="" />
+								<span class="tokyo_play_num">620</span>
+							</div>
+						</div>
+					</figure>-->
+					
+				</div>
+			</div>
+				<!--<div class="serialize_a_more">全部</div>-->
+			</div>
+			<div class="border_gray"></div>
+			<!--广告三-->
+			<div class="advertisement_b">
+				<a href="javascipt:void(0)" onclick="alert('弹出广告')"><img src="images/u19.jpg"/></a>
+				<a class="advertisement_b_center" href="javascipt:void(0)" onclick="alert('弹出广告')"><img src="images/u19.jpg"/></a>
+				<a href="javascipt:void(0)" onclick="alert('弹出广告')"><img src="images/u19.jpg"/></a>
+			</div>
+			<div class="border_gray"></div>
+			<!--吐槽大会 评论-->
+			<div class="hotGood_title">
+				<p class="hotGood_title_img" >
+					<!--<img src="images/icon/2.png" alt="" />-->
+				</p>
+				<p class="caikan_title">相关推荐-爱情</p>
+				<p class="tokyo_more"><span>更多大片</span><img src="images/icon/1.png" alt="" /></p>
+			</div>
+			<div class="swiper-container wrapper_swiper3">
+		   	 <div class="swiper-wrapper">
+		        <!--<div class="swiper-slide img_slide" ><img class="slide_1" src="images/u79.png"  /><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"></a>
+		        	<div class="swiper_message">
+			        	<div class="message_title_box">
+			        		<span class="message_series">天选之人:</span>
+			        		<span class="message_text">自恋主义者如何统治世界</span>
+			        	</div>
+			        	<div class="message_player_box">
+			        		<p>#记录 / <span class="message_player_time">23*16</span></p>
+			        	</div>
+		        	</div>
+		        </div>-->
+		       
+		   	 </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		</div>
+		<div class="border_gray"></div>	
+			<!--吐槽大会-->
+		<div class="hotGood_title">
+			<p class="hotGood_title_img" >
+				<!--<img src="images/icon/2.png" alt="" />-->
+			</p>
+			<p>吐槽大会</p>
+			<p class="tokyo_more"><span>更多</span><img src="images/icon/1.png" alt="" /></p>
+		</div>
+		<div class="tease_wrapper">
+			<div class="tease_nav">
+				<textarea class="comment_input" id="text_comment" required placeholder="吐口唾沫或吐朵金花"></textarea>
+				<div class="publish" style="display:none">发表</div>
+			</div>
+			<div class="tease_box">
+				<!--<figure>
+					<div class="com_mesage">
+						<div class="com_user">
+							<img class="user_img" src="images/icon/14.png"  />
+							<div class="user_mes">
+								<p class="user_name">幸运草</p>
+								<p class="user_time">1小时前</p>
+							</div>
+						</div>
+						<div class="com_information">
+							<div class="com_praise com_info_praise">
+								<img src="images/icon/20.png"  />
+								<p class="com_dianzan">9999+</p>
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="com_text">
+						你这条说说玩UN爱上拉丝机代付款按时间段里附近阿斯兰的风景阿萨德积分爱丽丝快递劫匪拉斯京东方拉斯快递劫匪爱上
+					</div>
+				</figure>-->
+				
+			</div>
+		</div>
+			<!--<div class="swiper-container wrapper_swiper1">
+			   	 <div class="swiper-wrapper">
+			        <div class="swiper-slide img_slide " ><img class="slide_1" src="images/u79.png"  /><a class="swiper_click"  href="detail.html?classId=2&type=1&dataPag=0"></a></div>
+			        <div class="swiper-slide img_slide "><img class="slide_2" src="images/u79.png"   /><a class="swiper_click" href="detail.html?classId=3&type=1&dataPag=0"></a></div>
+			    	<div class="swiper-slide img_slide "><img class="slide_2" src="images/u79.png"   /><a class="swiper_click" href="detail.html?classId=3&type=1&dataPag=0"></a></div>
+			  
+			   	 </div>
+			    
+			    <div class="swiper-pagination"></div>
+			</div>
+			-->
+	</body>
+	<script src="js/detail.js" type="text/javascript" ></script>
+	
+</html>

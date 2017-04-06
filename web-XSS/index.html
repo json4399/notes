@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="Keywords" content="陈军 陈军的博客 WEB安全-XSS攻击笔记  程序员 "/>
+		<meta name="description" content="陈军的github博客  打破程序员都是屌丝的传说" id="metaDescription">
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link href="css/index.css" rel="stylesheet">
+		<script src="../js/zepto.min.js" type="text/javascript"></script>
+		<script src="../js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>一个不是屌丝的程序猿！</title>
+	</head>
+	<body>
+		<!-- nav S-->
+		<header>
+			<div class="menu_wrapper">
+				<!--<img src="img/1.png" alt="" />-->
+			</div>
+			<p>WEB安全-XSS攻击笔记</p>
+			<div class="menu_user">
+				<!--<img src="img/Me-no@3x.png" alt="" />-->
+			</div>
+		</header>
+		
+		<!-- bodyCenter S-->
+		<div id="bodyCenter">
+			<h1>预备的知识</h1>
+				<p>具备Javascript开发能力</p>
+				<p>了解HTTP协议、Cookie、Ajax等基础知识！</p>
+			<h1>了解XSS的定义</h1>
+				<p>分为反射型和存储型</p>
+				<p>反射型：发出请求时，XSS代码出现在URL中，作为输入提交到服务端，服务端解析相应，XSS代码随响应数据一起传回到浏览器，最后浏览器解析XSS代码并执行。这个过程就像一次反射，故此叫反射性XSS</p>
+				<p>我理解的反射型：XSS代码出现在URL中就像一个参数，现在很多url后面都是search跟的参数，XSS代码的值可能是一段js或者css或者什么！通过url传入到服务端，服务端解析后原样返回给浏览器。浏览器是能识别js和css并直接执行的！</p>
+				<p>gitBash: npm install -g express-generator@4  (要全局安装express-generator，windows也可以用。)</p>
+				<p>$ mkdir mukewang  (创建mukewang文件夹)</p>
+				<p>$ cd mukewang (进入mukewang文件夹)</p>
+				<p>$ mkdir xss </p>
+				<p>$ cd xss</p>
+				<p>$ express -e ./  (在当前文件夹里面创建一个express实例，失败的话多试几次。麻痹第一次失败我懵逼了！检查了一遍没错就尝试又试了一遍好了！xiete!)</p>
+				<p>$ npm install (安装所有依赖)</p>
+				<p>修改xss里面的服务端和view端js，通过在url里面设置XSS的值进行脚本的植入</p>
+				<p>存储型：与反射型不同的是。它会把XSS代码存储在服务器、数据库、或者缓存里面。下次请求不用在添加XSS代码！</p>
+				
+			<h1>理解XSS的原理</h1>
+			<h1>理解XSS的攻击方式</h1>
+			<h1>掌握XSS的防范措施</h1>
+				<p>分为：过滤、</p>
+				<p>编码：把字符串装换成转义字符。</p>
+				<p>过滤：1.移除用户上传的DOM属性，如onerror、onclick、等事件属性.2.移除用户上传的style节点（设置body为none。）、script节点、Iframe节点（插入页面）</p>
+				<p>校正：1.避免直接对HTML Entity解码。2.使用DOM Parse转换，校正不配对的DOM标签。</p>
+				<p>
+					domParse.js=><a href="">https://github.com/blowsie/Pure-JavaScript-HTML5-Parser</a>
+					encode.js=> <a href="">https://github.com/mathiasbynens/he</a>
+				</p>
+			<h1>结尾总结</h1>
+				<p>理解XSS的攻击原理</p>
+				<p>了解常见的XSS攻击</p>
+				<p>掌握如何针对性的防御</p>
+				<p>动手操作模拟XSS攻击</p>
+		</div>
+		
+	</body>
+	
+	
+</html>

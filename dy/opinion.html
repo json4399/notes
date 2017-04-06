@@ -1,0 +1,150 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="影视之家" id="metaDescription">
+		<meta name="keywords" content="影视之家" id="metaKeyWords"/>
+		<link rel="stylesheet" href="css/reset.css" />
+		<script src="js/zepto.min.js" type="text/javascript"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<title id="more_nav"></title>
+		<style type="text/css">
+		nav{
+	display:-webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack:center;
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:0.88rem;
+	border-bottom: solid 1px #e1e1e1;
+}
+.menu_wrapper{
+	position:absolute;
+	left:0.3rem;
+	top:0;
+	bottom:0;
+	margin:auto 0;
+	display:-webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack:center;
+	color:#333;
+	font-size:0.3rem;
+}
+.menu_wrapper img{
+	width:0.24rem;
+	margin-right:0.1rem;
+}
+.nav_title_wrapper{
+	display:-webkit-box;
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+	font-size:0.34rem;
+	color:#333;
+}
+.nav_title{
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-box-align:center;
+	-webkit-box-pack:justify;
+}
+.cartoonTitle{
+	display:block;
+}
+.nav_title span{
+	display:block;
+	width:0.6rem;
+	height:0.04rem;
+	margin-top:0.1rem;
+	
+}
+.nav_title.active span{
+	background:#ffe600;
+}	
+.opinion_body{width:100%;background:"url(images/意见反馈-bg.png)" no-repeat ;margin-top:0.88rem;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;-webkit-box-orient:vertical;}
+.opinion_text{width:6.6rem;height:2.5rem;background:rgba(247,247,247,0.5);padding:0.2rem 0.1rem 0.1rem 0.2rem;border:solid 1px #e1e1e1;font-size:0.3rem;color:#666;margin-top:0.6rem;}
+.opinion_email{display:block;width:6.6rem;height:0.6rem;line-height:0.6rem;font-size:0.3rem;color:#666;border:solid 1px #e1e1e1;margin:0.4rem 0 0 0;padding-left:0.2rem;}	
+.opinion_btn{width:6.6rem;height:0.9rem;background:#E1544d;color:white;line-height:0.9rem;text-align:center;font-size:0.36rem;border-radius: 3px;}
+.textarea_box{position:relative;}
+.opinion_text_limit{position:absolute;right:0.1rem;bottom:0.4rem;z-index:1;font-size:0.24rem;color:#ccc;display:none;}
+		</style>
+	</head>
+	<body>
+		<!-- nav S-->
+		<nav>
+			<div class="menu_wrapper">
+				<img src="images/icon/23.png"  />
+				返回
+			</div>
+			<div class="nav_title_wrapper">
+				<div class="nav_title cartoon active">
+					<p class="cartoonTitle">意见反馈</p>
+					<!--<span></span>-->
+				</div>
+			</div>
+		</nav>
+		<div class="opinion_body">
+			<div class="textarea_box">
+				<textarea class="opinion_text" name="opinion_text" rows="" cols="" placeholder="请写下您的宝贵意见，我们将不断改进"></textarea>
+				<p class="opinion_text_limit">0/200</p>
+				<p class="opinion_show" style="color:#EF4242;font-size:0.24rem;width:6.6rem;opacity:0;">请输入内容</p>
+			</div>
+			<input class="opinion_email" placeholder="请输入email" type="email" />
+			<p class="opinion_email_show" style="color:#EF4242;font-size:0.24rem;width:6.6rem;margin-bottom:0.5rem;opacity:0;">请输入email</p>
+			<div class="opinion_btn">提交留言</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			function putOpinion(text,email){
+				$.ajax({type:"get",dataType:"json",url:"http://m.21html5.net/do/liuyan.php?text="+text+"&email="+email,async:true,success:function(s){if(s.status == '1'){alert("感谢您的反馈！您的支持是我们最大的动力！")}},error:function(error){}});
+			};
+			function testVal(){
+				var opinion_text = $(".opinion_text").val();
+				var opinion_email = $(".opinion_email").val();
+				if(!opinion_text){
+					$(".opinion_show").css("opacity","1")
+					return false;
+				}else if(!opinion_email){
+					$(".opinion_email_show").css("opacity","1").text("请输入email")
+						return false;
+				}else{
+					if((/^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/.test(opinion_email))){
+						$(".opinion_email_show").css("opacity","0");
+						$(".opinion_btn").attr("loading_btn","1");//等待5s
+						setTimeout(function(){
+							$(".opinion_btn").attr("loading_btn","");
+						},5000);
+						putOpinion(opinion_text,opinion_email);
+					}else{
+						$(".opinion_email_show").css("opacity","1").text("请输入正确的email")
+						return false;
+					}
+					
+				}
+			};
+			$(".opinion_btn").on("click",function(){
+				var loading_val = $(".opinion_btn").attr("loading_btn");
+				if(loading_val == "1"){
+				}else{
+					testVal();
+				}
+			})
+			//textarea
+			$(".opinion_text").focus(function(){
+				var opinion_text = $(".opinion_text").val();
+				if(!opinion_text){
+					$(".opinion_show").css("opacity","0")
+				}
+			});
+			//email
+			$(".opinion_email").focus(function(){
+				var opinion_text = $(".opinion_email").val();
+				if(!opinion_text){
+					$(".opinion_email_show").css("opacity","0")
+				}
+			})
+		})
+	</script>
+</html>
